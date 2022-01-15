@@ -109,11 +109,11 @@ nav {
 
 .journey__button .journey__button-icon {
   transform: translateX(0);
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease-out;
 }
 
 .journey__button:hover .journey__button-icon {
-  transform: translateX(5px);
+  transform: translateX(10px);
 }
 
 .journey__right {
