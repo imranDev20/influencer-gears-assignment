@@ -53,19 +53,19 @@ nav {
   display: flex;
 }
 
-.nav-item {
+.header__menu-item {
   padding: 5px;
   margin-left: 10px;
   margin-right: 10px;
 }
 
-.nav-link {
+.header__link {
   color: var(--grey-color);
   transition: 0.3s color;
   font-weight: 600;
 }
 
-.nav-link:hover {
+.header__link:hover {
   color: var(--pink-color);
 }
 
@@ -103,6 +103,17 @@ nav {
   padding: 10px 24px;
   border-radius: 41px;
   display: inline-block;
+  transform: translateX(5px);
+  transition: transform 0.5s ease;
+}
+
+.journey__button .journey__button-icon {
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+}
+
+.journey__button:hover .journey__button-icon {
+  transform: translateX(5px);
 }
 
 .journey__right {
@@ -125,8 +136,9 @@ nav {
   justify-content: center;
   align-items: center;
   padding: 36px 0;
-  border-top: 1px solid;
-  border-bottom: 1px solid;
+  border-top: 1px solid rgba(192, 204, 218, 0.3);
+  border-bottom: 1px solid rgba(192, 204, 218, 0.3);
+
   padding-left: 25px;
   padding-right: 25px;
 }
@@ -243,19 +255,14 @@ nav {
 
 /* Contact */
 .contact {
-  max-width: 1200px;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  align-items: center;
+
   margin-top: 100px;
   padding-left: 25px;
   padding-right: 25px;
-}
-
-.contact__left {
-  width: 60%;
-  padding-right: 100px;
+  text-align: center;
 }
 
 .contact__title {
@@ -273,8 +280,8 @@ nav {
 .contact__form {
   display: flex;
   flex-direction: column;
-
-  padding-right: 100px;
+  justify-content: center;
+  margin-top: 25px;
 }
 
 .contact__form-row {
@@ -293,6 +300,12 @@ nav {
   padding: 12px;
   border: 1px solid rgba(192, 204, 218, 0.6);
   border-radius: 3px;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid var(--pink-color);
 }
 
 .contact__form input[type="submit"] {
@@ -300,16 +313,6 @@ nav {
   color: white;
   cursor: pointer;
   border: none;
-}
-
-.contact__right {
-  width: 40%;
-}
-
-.contact__right img {
-  width: 100%;
-  border-radius: 10px;
-  object-fit: contain;
 }
 
 /* Footer */
@@ -356,7 +359,7 @@ footer {
 /* Tablet View */
 @media (max-width: 992px) {
   /* Header */
-  .nav-link {
+  .header__link {
     display: none;
   }
   .header__shop {
